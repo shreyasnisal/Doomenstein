@@ -1,7 +1,10 @@
 # Doomenstein
 
-A first-person shooting game developed in my custom C++ game engine.
+![Static Badge](https://img.shields.io/badge/C%2B%2B-deepskyblue?style=flat)
+![Static Badge](https://img.shields.io/badge/Custom%20Engine-dodgerblue?style=flat)
+![Static Badge](https://img.shields.io/badge/Virtual%20Reality-darkviolet?style=flat)
 
+A first-person shooting game developed in my custom C++ game engine.
 
 ## How to Use
 
