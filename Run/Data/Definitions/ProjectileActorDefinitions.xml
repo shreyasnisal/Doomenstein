@@ -1,0 +1,39 @@
+<Definitions>
+  <!-- Plasma Projectile -->
+  <ActorDefinition name="PlasmaProjectile" canBePossessed="false" corpseLifetime="0.3" visible="true">
+    <Collision radius="0.075" height="0.15" collidesWithWorld="true" collidesWithActors="true" damageOnCollide="5.0~10.0" impulseOnCollide="4.0" dieOnCollide="true"/>
+    <Physics simulated="true" turnSpeed="0.0" flying="true" drag="0.0" />
+    <Visuals size="0.25,0.25" pivot="0.5,0.5" billboardType="FullOpposing" renderLit="false" renderRounded="false" shader="Default" spriteSheet="Data/Images/Plasma.png" cellCount="4,1">
+      <AnimationGroup name="Walk" secondsPerFrame="0.1" playbackMode="Loop">
+        <Direction vector="1,0,0"><Animation startFrame="0" endFrame="0"/></Direction>
+      </AnimationGroup>
+      <AnimationGroup name="Death" secondsPerFrame="0.1" playbackMode="Loop">
+        <Direction vector="1,0,0"><Animation startFrame="1" endFrame="3"/></Direction>
+      </AnimationGroup>
+    </Visuals>
+  </ActorDefinition>
+  
+  <!-- Grenade Projectile -->
+  <ActorDefinition name="Grenade" canBePossessed="false" corpseLifetime="0.0" visible="true">
+	<Collision radius="0.075" height="0.05" collidesWithWorld="true" collidesWithActors="true" dieOnCollide="true" explodeOnDie="true" explosionRadius="3.0" explosionParticles="200" explosionParticleColor="255,165,0" explosionParticleSize="0.01~0.02" explosionParticleLifetime="1.0" explosionParticleSpeed="3.0" damageOnExplode="50.0~100.0" impulseOnExplode="2.0" />
+	<Physics simulated="true" turnSpeed="0.0" drag="10.0" gravityScale="0.2" />
+	<Visuals is3D="true" modelFile="Data/Models/Grenade" shader="Data/Shaders/Diffuse">
+		<Transform x="-1.0,0.0,0.0" y="0.0,0.0,1.0" z="0.0,-1.0,0.0" T="0.0,0.0,0.05" scale="0.1" />
+	</Visuals>
+	<Sounds>
+      <Sound sound="Death" name="Data/Audio/Grenade_Explode2.ogg"/>
+    </Sounds>
+  </ActorDefinition>
+  
+  <!-- Rocket Projectile -->
+  <ActorDefinition name="Rocket" canBePossessed="false" corpseLifetime="0.0" visible="true">
+	<Collision radius="0.075" height="0.05" collidesWithWorld="true" collidesWithActors="true" dieOnCollide="true" explodeOnDie="true" explosionRadius="3.0" explosionParticles="200" explosionParticleColor="255,165,0" explosionParticleSize="0.01~0.02" explosionParticleLifetime="1.0" explosionParticleSpeed="3.0" damageOnExplode="50.0~100.0" impulseOnExplode="2.0" />
+	<Physics simulated="true" turnSpeed="0.0" drag="0.0" gravityScale="0.0" />
+	<Visuals is3D="true" modelFile="Data/Models/Rocket" shader="Data/Shaders/Diffuse" showParticles="true" particles="1" particleSize="0.01~0.02" particleLifetime="0.5" particleSpeed="2.0" particleColor="255,255,0">
+		<Transform x="0.0,0.0,1.0" y="0.0,1.0,0.0" z="1.0,0.0,0.0" scale="1.5" />
+	</Visuals>
+	<Sounds>
+      <Sound sound="Death" name="Data/Audio/Grenade_Explode2.ogg"/>
+    </Sounds>
+  </ActorDefinition>
+</Definitions>

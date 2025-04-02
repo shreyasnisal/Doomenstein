@@ -1,0 +1,76 @@
+<Definitions>
+  <!-- Pistol -->
+  <WeaponDefinition name="Pistol" refireTime="0.75" rayCount="1" rayCone="0.0" rayRange="40.0" rayDamage="10.0~15.0" rayImpulse="4.0">
+    <HUD shader="Default" baseTexture="Data/Images/Hud_Base.png" reticleTexture="Data/Images/Reticle.png" reticleSize="16,16" spriteSize="256,256" spritePivot="0.5,0.0">
+      <Animation name="Idle" shader="Default" spriteSheet="Data/Images/Weapon_Pistol.png" cellCount="5,1" secondsPerFrame="0.1" startFrame="0" endFrame="0"/>
+      <Animation name="Attack" shader="Default" spriteSheet="Data/Images/Weapon_Pistol.png" cellCount="5,1" secondsPerFrame="0.1" startFrame="1" endFrame="3" />
+    </HUD>
+    <Sounds>
+      <Sound sound="Fire" name="Data/Audio/PistolFire.wav"/>
+    </Sounds>
+  </WeaponDefinition>
+  <!-- Plasma Rifle -->
+  <WeaponDefinition name="PlasmaRifle" refireTime="0.1" projectileCount="1" projectileActor="PlasmaProjectile" projectileCone="4.0" projectileSpeed="4.0">
+    <HUD shader="Default" baseTexture="Data/Images/Hud_Base.png" reticleTexture="Data/Images/Reticle.png" reticleSize="16,16" spriteSize="256,256" spritePivot="0.5,0.0">
+      <Animation name="Idle" shader="Default" spriteSheet="Data/Images/Weapon_Plasma.png" cellCount="4,1" secondsPerFrame="0.125" startFrame="0" endFrame="0" />
+      <Animation name="Attack" shader="Default" spriteSheet="Data/Images/Weapon_Plasma.png" cellCount="4,1" secondsPerFrame="0.125" startFrame="1" endFrame="2" />
+    </HUD>
+    <Sounds>
+      <Sound sound="Fire" name="Data/Audio/PlasmaFire.wav"/>
+    </Sounds>
+  </WeaponDefinition>
+  <!-- Demon Melee -->
+  <WeaponDefinition name="DemonMelee" refireTime="2.0" meleeCount="1" meleeArc="180.0" meleeRange="0.75" meleeDamage="2.0~4.0" meleeImpulse="2.0">
+    <Sounds>
+      <Sound sound="Fire" name="Data/Audio/DemonAttack.wav"/>
+    </Sounds>
+  </WeaponDefinition>
+  <WeaponDefinition name="Pistol3D" refireTime="0.75" rayCount="1" rayCone="0.0" rayRange="10.0" rayDamage="10.0~15.0" rayImpulse="4.0">
+	<Visuals is3D="true" modelFile="Data/Models/Pistol" scale="0.2" shader="Data/Shaders/Diffuse" reticleTexture="Data/Images/GunCrosshair.png" reticleSize="32,32">
+		<Transform x="-1.0,0.0,0.0" y="0.0,0.0,1.0" z="0.0,1.0,0.0" T="0.0,-0.2,0.0" />
+	</Visuals>
+	<Sounds>
+      <Sound sound="Fire" name="Data/Audio/Pistol_Fire.ogg"/>
+    </Sounds>
+  </WeaponDefinition>
+  <WeaponDefinition name="AK3D" refireTime="0.1" rayCount="1" rayCone="5.0" rayRange="15.0" rayDamage="10.0~20.0" rayImpulse="4.0">
+	<Visuals is3D="true" modelFile="Data/Models/AK" scale="0.2" shader="Data/Shaders/Diffuse" reticleTexture="Data/Images/GunCrosshair.png" reticleSize="32,32">
+		<Transform x="-1.0,0.0,0.0" y="0.0,0.0,1.0" z="0.0,1.0,0.0" T="0.0,-0.2,0.0" />
+	</Visuals>
+	<Sounds>
+      <Sound sound="Fire" name="Data/Audio/AK_Fire.ogg"/>
+    </Sounds>
+  </WeaponDefinition>
+  <WeaponDefinition name="EnemyPistol3D" refireTime="0.75" rayCount="1" rayCone="5.0" rayRange="10.0" rayDamage="5.0~10.0" rayImpulse="4.0">
+	<Visuals is3D="true" modelFile="Data/Models/Pistol" scale="0.2" shader="Data/Shaders/Diffuse" reticleTexture="Data/Images/Reticle.png" reticleSize="16,16">
+		<Transform x="-1.0,0.0,0.0" y="0.0,0.0,1.0" z="0.0,1.0,0.0" T="0.0,-0.2,0.0" />
+	</Visuals>
+	<Sounds>
+      <Sound sound="Fire" name="Data/Audio/Pistol_Fire.ogg"/>
+    </Sounds>
+  </WeaponDefinition>
+  <WeaponDefinition name="GrenadeLauncher3D" refireTime="3.0" projectileCount="1" projectileActor="Grenade" projectileCone="1.0" projectileSpeed="100.0">
+	<Visuals is3D="true" modelFile="Data/Models/GrenadeLauncher" scale="0.2" shader="Data/Shaders/Diffuse" reticleTexture="Data/Images/GrenadeLauncherCrosshair.png" reticleSize="32,32">
+		<Transform x="-1.0,0.0,0.0" y="0.0,0.0,1.0" z="0.0,1.0,0.0" T="0.0,-0.2,0.0" />
+	</Visuals>
+	<Sounds>
+      <Sound sound="Fire" name="Data/Audio/GrenadeLauncher.ogg"/>
+    </Sounds>
+  </WeaponDefinition>
+   <!-- Knife -->
+  <WeaponDefinition name="Knife3D" refireTime="2.0" meleeCount="1" meleeArc="180.0" meleeRange="1.25" meleeDamage="2.0~4.0" meleeImpulse="2.0">
+    <Visuals is3D="true" modelFile="Data/Models/Knife" scale="0.2" shader="Data/Shaders/Diffuse" >
+		  <Transform x="-1.0,0.0,0.0" y="0.0,0.0,1.0" z="0.0,1.0,0.0" T="0.0,-0.2,0.0" />
+	</Visuals>
+	<Sounds>
+      <Sound sound="Fire" name="Data/Audio/Knife_Attack.wav"/>
+    </Sounds>
+  </WeaponDefinition>
+   <!-- Rocket Launcher -->
+   <WeaponDefinition name="RocketLauncher3D" refireTime="3.0" projectileCount="1" projectileActor="Rocket" projectileCone="5.0" projectileSpeed="5.0">
+	<Visuals is3D="true" />
+	<Sounds>
+      <Sound sound="Fire" name="Data/Audio/RocketLauncher.ogg"/>
+    </Sounds>
+  </WeaponDefinition>
+</Definitions>
